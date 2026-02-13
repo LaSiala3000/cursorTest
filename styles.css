@@ -1,0 +1,196 @@
+/* --- Minimal Photography Portfolio --- */
+:root {
+  --bg: #faf8f5;
+  --text: #1c1b19;
+  --text-muted: #6b6762;
+  --accent: #2d4a3e;
+  --transition: 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- Header --- */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem 2rem;
+  z-index: 100;
+  background: linear-gradient(to bottom, var(--bg) 60%, transparent);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+
+.site-title {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-size: clamp(1.25rem, 4vw, 1.5rem);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 0;
+  color: var(--text);
+}
+
+/* --- Email Signup --- */
+.email-signup {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  max-width: 280px;
+}
+
+.email-signup input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.5rem 0.75rem;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.875rem;
+  color: var(--text);
+  background: transparent;
+  border: 1px solid rgba(28, 27, 25, 0.2);
+  border-radius: 0;
+  transition: border-color var(--transition);
+}
+
+.email-signup input::placeholder {
+  color: var(--text-muted);
+}
+
+.email-signup input:focus {
+  outline: none;
+  border-color: var(--text-muted);
+}
+
+.email-signup button {
+  padding: 0.5rem 1rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--bg);
+  background: var(--text);
+  border: none;
+  cursor: pointer;
+  transition: opacity var(--transition);
+}
+
+.email-signup button:hover {
+  opacity: 0.85;
+}
+
+.email-signup button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.form-feedback {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  margin-top: 0.35rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* --- Gallery --- */
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 5rem 0 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  vertical-align: middle;
+}
+
+/* Staggered image widths for visual rhythm */
+.gallery-item[data-index="0"] img,
+.gallery-item[data-index="2"] img {
+  max-width: 92%;
+  margin-left: auto;
+}
+
+.gallery-item[data-index="1"] img,
+.gallery-item[data-index="3"] img {
+  max-width: 88%;
+  margin-right: auto;
+}
+
+/* Fade-in on scroll */
+.gallery-item {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity var(--transition), transform var(--transition);
+}
+
+.gallery-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Spacing between images */
+.gallery-item {
+  padding: 2rem 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .gallery-item {
+    padding: 3rem 2rem;
+  }
+}
+
+/* --- Footer --- */
+.footer {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.footer-text {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+  margin: 0;
+}

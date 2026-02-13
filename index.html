@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photography</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=DM+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <h1 class="site-title">Photography</h1>
+    <form class="email-signup" id="email-form" target="form-target" action="">
+      <input type="email" name="email" placeholder="your@email.com" required>
+      <button type="submit">Subscribe</button>
+      <span class="form-feedback" aria-live="polite"></span>
+    </form>
+  </header>
+  <iframe name="form-target" title="Form submission target" hidden aria-hidden="true"></iframe>
+
+  <main class="gallery">
+    <figure class="gallery-item" data-index="0">
+      <img 
+        src="assets/DSCF0578-1f22622f-667f-4b52-99f9-fc30b29d9160.png" 
+        alt="View from reclining position towards a sun-drenched bay with a coastal town on the hillside"
+        loading="lazy"
+      >
+    </figure>
+    <figure class="gallery-item" data-index="1">
+      <img 
+        src="assets/DSCF0562-80768cb7-a220-4d8a-9106-e586f6442b22.png" 
+        alt="Swimmer in clear turquoise water with coastal town and hills in the background"
+        loading="lazy"
+      >
+    </figure>
+    <figure class="gallery-item" data-index="2">
+      <img 
+        src="assets/DSCF0556-3f439f8a-1ba2-4beb-9603-4f119eae65ef.png" 
+        alt="Picturesque bay with turquoise waters, sandy beach, and village on green hillside"
+        loading="lazy"
+      >
+    </figure>
+    <figure class="gallery-item" data-index="3">
+      <img 
+        src="assets/DSCF0482-5455b392-37aa-4461-8c73-3fdc1bde98f9.png" 
+        alt="Serene beach scene with golden sand, calm sea, and distant islands"
+        loading="lazy"
+      >
+    </figure>
+  </main>
+
+  <footer class="footer">
+    <p class="footer-text">© 2025</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

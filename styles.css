@@ -146,7 +146,8 @@ body {
 
 /* Staggered image widths for visual rhythm */
 .gallery-item[data-index="0"] img,
-.gallery-item[data-index="2"] img {
+.gallery-item[data-index="2"] img,
+.gallery-item[data-index="4"] img {
   max-width: 92%;
   margin-left: auto;
 }

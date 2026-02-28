@@ -153,7 +153,8 @@ body {
 }
 
 .gallery-item[data-index="1"] img,
-.gallery-item[data-index="3"] img {
+.gallery-item[data-index="3"] img,
+.gallery-item[data-index="5"] img {
   max-width: 88%;
   margin-right: auto;
 }
